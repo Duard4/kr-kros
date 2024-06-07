@@ -12,7 +12,6 @@ export class HomePage implements OnInit {
   army: Army;
   totalCosts: number[];
   averageSpeed: number;
-  descriptions: string[];
   skeletonKnightCount: number;
   elephantCount: number;
   heavyInfantryCount: number;
@@ -21,7 +20,6 @@ export class HomePage implements OnInit {
     this.army = new Army();
     this.totalCosts = [0, 0, 0];
     this.averageSpeed = 0;
-    this.descriptions = [];
     this.skeletonKnightCount = 0;
     this.elephantCount = 0;
     this.heavyInfantryCount = 0;
@@ -54,6 +52,5 @@ export class HomePage implements OnInit {
   calculateResults() {
     this.totalCosts = this.army.calculateTotalDailyCost();
     this.averageSpeed = this.army.calculateAverageSpeed();
-    this.descriptions = this.army.getWarriorDescriptions();
   }
 }

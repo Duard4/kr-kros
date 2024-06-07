@@ -8,10 +8,6 @@ export class SkeletonKnight implements IWarrior {
   getSpeed(): number {
     return 25;
   }
-
-  getDescription(): string {
-    return 'Skeleton Knight in heavy armor';
-  }
 }
 
 export class Elephant implements IWarrior {
@@ -22,10 +18,6 @@ export class Elephant implements IWarrior {
   getSpeed(): number {
     return 30;
   }
-
-  getDescription(): string {
-    return 'War Elephant';
-  }
 }
 
 export class HeavyInfantry implements IWarrior {
@@ -35,9 +27,5 @@ export class HeavyInfantry implements IWarrior {
 
   getSpeed(): number {
     return 3;
-  }
-
-  getDescription(): string {
-    return 'Heavy Infantry';
   }
 }

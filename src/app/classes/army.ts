@@ -29,8 +29,4 @@ export class Army {
         const totalSpeed = this.warriors.reduce((total, warrior) => total + warrior.getSpeed(), 0);
         return totalSpeed / this.warriors.length;
     }
-
-    getWarriorDescriptions(): string[] {
-        return this.warriors.map(warrior => warrior.getDescription());
-    }
 }
