@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Контрольна робота
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Армія складається з</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Лицарі Скелети</ion-label>
+          <ion-input [(ngModel)]="skeletonKnightCount" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Слони</ion-label>
+          <ion-input [(ngModel)]="elephantCount" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Важка Піхота</ion-label>
+          <ion-input [(ngModel)]="heavyInfantryCount" type="number"></ion-input>
+        </ion-item>
+        <ion-button expand="full" (click)="addWarriors()">Додати Армію</ion-button>
+        <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Розрахунки </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Денна вартість в золоті: {{ totalCosts[0] }}</p>
+        <p>Денна вартість в людях: {{ totalCosts[1] }}</p>
+        <p>Денна вартість в кормі: {{ totalCosts[2] }}</p>
+        <p>Середня швидкість: {{ averageSpeed }} км/г</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-content>
